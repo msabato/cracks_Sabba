@@ -1,0 +1,178 @@
+#####################################################
+#                                                  									 #
+#    CONFIGURATION FILE for ANIMATIONS			  		 #
+#                                                  									 #
+#####################################################
+
+#FRAMES DATA FOLDER
+"/Volumes/Seagate_ms/data/light_scattering/190723_Sample36/Part1/"
+
+#OVERLAY FRAMES FOLDER
+"/Users/matteo/Documents/Uni/TESI/_analysis/Sample_36/Fwd/"
+
+#ANALYSIS ROOT FOLDER
+"/Users/matteo/Documents/Uni/TESI/_analysis/"
+
+#CORRELATION FOLDER
+"Sample_36/Fwd/"
+
+#info about MI file
+
+#FRAMES FILE NAME
+"MI0001_v.dat"
+
+#HEADER SIZE (in bytes)
+0
+
+#TOTAL NUMBER OF IMAGES
+1000
+
+#PIXELS PER IMAGE
+1310720
+
+#IMAGE WIDTH (in pixels)
+1280
+
+#IMAGE HEIGHT (in pixels)
+1024
+
+#PIXEL DEPTH (in bytes)
+1
+
+#ACQUISITION FRAMERATE
+10
+
+#VARIABLE FORMAT
+#Available formats:
+# form	depth type
+# c	    1	  char
+# b	    1	  signed char
+# B	    1	  unsigned char
+# ?	    1	  bool
+# h	    2	  short
+# H	    2 	  unsigned short
+# i	    4	  int
+# I	    4 	  unsigned int
+# l	    4	  long
+# L	    4	  unsigned long
+# q	    8	  long long
+# Q	    8	  unsigned long long
+# f	    4	  float
+# d	    8	  double
+# (see https://docs.python.org/2/library/struct.html)
+"B"
+
+#USERNAME
+"msabato@g.harvard.edu"
+
+#IMAGE SIZE (arrays to be written as [x,y,z] comma separated values with NO SPACES)
+[1280,1024]
+
+#ROI SIZE
+[8,8]
+
+#CORR STARTING IMAGE INDEX
+425
+
+#CORR LAST IMAGE INDEX
+700
+
+#NUMBER OF LAG TIME CORRELATION TO BE CALCULATED
+10
+
+#LAGS LIST
+[1,2,3,4,5,6,8,10,15,20]
+
+#VIDEO OUTPUT FILENAME
+"S36_frame"
+
+#ANIMATION STARTING IMAGE INDEX
+425
+
+#ANIMATION LAST IMAGE INDEX
+700
+
+#FRAME RATE FOR VIDEO OUTPUT
+10
+
+#SINGLE FRAME DPI
+100
+
+#SINGLE FRAME EXT
+".jpg"
+
+#FFMPEG PATH
+"/anaconda3/envs/python2/bin/ffmpeg"
+
+#SHOW TIME (1 for True, 0 for False)
+1
+
+#TIME LABEL POS
+[40,40]
+
+#USE QUIVER (1 for True, 0 for False)
+0
+
+#VEL MAP FILENAME_x
+"v_x.dat"
+
+#VEL MAP FILENAME_x
+"v_y.dat"
+
+#COARSE GRAINING FACTOR
+[2,2]
+
+#ANIMATION TITLE
+"Sample_58"
+
+#QUIVER OPTIONS
+#K_CORRMAP_ARROW_COLOR
+"yellow"
+
+#K_CORRMAP_ARROW_SCALE
+0.05
+
+#K_CORRMAP_ARROW_UNITS
+"xy"                       
+
+#K_CORRMAP_ARROW_HEADLENGTH
+0
+
+#K_CORRMAP_ARROW_PIVOT
+"mid"       
+
+#K_CORRMAP_ARROW_HEADWIDTH
+1
+
+#K_CORRMAP_ARROW_LINEWIDTH
+0.5
+
+#K_CORRMAP_ARROW_WIDTH
+2
+
+#USE OVERLAY BOOL (1 for True, 0 for False)
+1
+
+#OVERLAY FILENAME
+"v_heatmap.dat"
+
+#OVERLAY FRAME SIZE
+[160,128]
+
+#OVERLAY PIXEL DEPTH
+4
+
+#OVERLAY WEIGHT (0 for power law, 1 for reversed power law, 2 for logarithmic)
+0
+
+#OVERLAY POWER LAW EXPONENT
+0.75
+
+#OVERLAY NORMALIZATION FACTOR
+0.7
+
+#OVERLAY COLORMAPCMAP
+"rainbow"
+
+
+

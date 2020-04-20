@@ -1,0 +1,133 @@
+#####################################################
+#                                                  									 #
+#    CONFIGURATION FILE for PLASTIC ACTIVITY ANALYSIS   	 #
+#                                                  									 #
+#####################################################
+
+#ANALYSIS ROOT FOLDER
+"/Users/matteo/Documents/Uni/TESI/_analysis/"
+
+#ANALYSIS SAMPLE FOLDER
+"calibration/diluted_sample/horizontal/0005ulh/"
+
+#info about MI file
+
+#FILE NAME
+"MI0001_h.dat"
+
+#HEADER SIZE (in bytes)
+0
+
+#TOTAL NUMBER OF IMAGES
+1000
+
+#PIXELS PER IMAGE
+1310720
+
+#IMAGE WIDTH (in pixels)
+1280
+
+#IMAGE HEIGHT (in pixels)
+1024
+
+#PIXEL DEPTH (in bytes)
+1
+
+#ACQUISITION FRAMERATE
+10
+
+#VARIABLE FORMAT
+#Available formats:
+# form	depth type
+# c	    1	  char
+# b	    1	  signed char
+# B	    1	  unsigned char
+# ?	    1	  bool
+# h	    2	  short
+# H	    2 	  unsigned short
+# i	    4	  int
+# I	    4 	  unsigned int
+# l	    4	  long
+# L	    4	  unsigned long
+# q	    8	  long long
+# Q	    8	  unsigned long long
+# f	    4	  float
+# d	    8	  double
+# (see https://docs.python.org/2/library/struct.html)
+"B"
+
+#USERNAME
+"msabato@g.harvard.edu"
+
+#IMAGE SIZE (arrays to be written as [x,y,z] comma separated values with NO SPACES)
+[1280,1024]
+
+#ROI SIZE
+[16,16]
+
+#STARTING IMAGE INDEX
+250
+
+#LAST IMAGE INDEX
+750
+
+#NUMBER OF LAG TIME CORRELATION TO BE CALCULATED
+7
+
+#LAGS LIST
+[1,2,5,10,20,50,100]
+
+#CUTOFF VALUE (displacement)
+4.5
+
+#CUTOFF VALUE (correlation)
+0.2
+
+###########################################################################
+################	PARAMETERS FOR _plastic_def.py FUNCTION	         ################
+##########################################################################
+
+#NON-AFFINE TRANSFORMATION
+# Transform second twin before comparing with first twin (to overlap images taking with different camera)
+# Affine transformation:
+
+# (x', y') = ((A, B), (C, D)) * (x, y) + (E, F)
+
+# where (x, y) is the coordinate of pixel p in second twin,
+# whereas (x', y') is the coordinate of the associated pixel p' in first twin
+# Equivalently:
+
+# x' = A*x + B*y + E
+# y' = C*x + D*y + F\
+
+# Specify coefficients in the form: [A, B, C, D, E, F]
+# Examples:
+
+# - Identity: (1, 0, 0, 1, 0, 0)
+# - Pure translation: (1, 0, 0, 1, dx, dy)
+# - Flip horizontally: (-1, 0, 0, 1, 0, 0)
+# - 90deg rotation CW: (0, 1, -1, 0, 0, 0)
+
+# none is equivalent to Identity
+
+#TRANSFORMATION COEFFICIENTS
+[-1, 0, 0, 1, 162, 0]
+
+#NON-AFF TRANSF FILLVALUE
+0
+
+#NON_AFF TRANSF INTERPOLATION ORDER
+1
+
+###########################################################################
+################		PARAMETERS FOR _calibration_pl.py 			 ################
+##########################################################################
+
+#USE AREA OF INTEREST (type 0 for False or 1 for True)
+1
+
+#AOI POSITION
+[8,7]
+
+#AOI SIZE
+[25,33]

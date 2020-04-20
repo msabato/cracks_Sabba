@@ -1,0 +1,185 @@
+#####################################################
+#                                                  									 #
+#    CONFIGURATION FILE for CORRELATION ANALYSIS   		 #
+#                                                  									 #
+#####################################################
+
+#DATA FOLDER
+"/Users/matteo/Documents/Uni/TESI/_data/light_scattering/191031_calibration/0005ulh_v/"
+
+#ANALYSIS ROOT FOLDER
+"/Users/matteo/Documents/Uni/TESI/_analysis/"
+
+#ANALYSIS SAMPLE FOLDER
+"Sample_49/ROI16x16/forward/"
+
+#info about MI file
+
+#FILE NAME
+"MI0001.dat"
+
+#HEADER SIZE (in bytes)
+8
+
+#TOTAL NUMBER OF IMAGES
+5000
+
+#PIXELS PER IMAGE
+20480
+
+#IMAGE WIDTH (in pixels)
+160
+
+#IMAGE HEIGHT (in pixels)
+128
+
+#PIXEL DEPTH (in bytes)
+1
+
+#ACQUISITION FRAMERATE
+240.2
+
+#VARIABLE FORMAT
+#Available formats:
+# form	depth type
+# c	    1	  char
+# b	    1	  signed char
+# B	    1	  unsigned char
+# ?	    1	  bool
+# h	    2	  short
+# H	    2 	  unsigned short
+# i	    4	  int
+# I	    4 	  unsigned int
+# l	    4	  long
+# L	    4	  unsigned long
+# q	    8	  long long
+# Q	    8	  unsigned long long
+# f	    4	  float
+# d	    8	  double
+# (see https://docs.python.org/2/library/struct.html)
+"B"
+
+#USERNAME
+"msabato@g.harvard.edu"
+
+#IMAGE SIZE (arrays to be written as [x,y,z] comma separated values with NO SPACES)
+[160,128]
+
+#ROI SIZE
+[4,4]
+
+#STARTING IMAGE INDEX
+500
+
+#LAST IMAGE INDEX
+4500
+
+#NUMBER OF LAG TIME CORRELATION TO BE CALCULATED
+15
+
+#LAGS LIST
+[1,2,5,10,15,20,30,50,100,150,200,250,300,400,500]
+
+#FRAME RATE FOR VIDEO OUTPUT
+10
+
+#APPLY MASK (type 0 for False or 1 for True)
+0
+
+#MASK FILENAME 
+"Mask.dat"
+
+############################################################################
+################	PARAMETERS FOR _check_regime.py FUNCTION	  ################
+##########################################################################
+
+#LINE NUMBER
+22
+
+#ROI NUMBER
+33
+
+#NUMBER OF DIFFERENT t_0
+1
+
+#t_0
+[200]
+
+#CUTOFF VALUE (displacement)
+4.5
+
+#CUTOFF VALUE (correlation)
+0.2
+
+#ANALYZE 1 IMAGE EVERY
+1
+
+#AVERAGE OVER GROUPS OF IMAGES
+1
+
+#VIDEO COLORMAP
+"Greys_r"
+
+#TIME LABEL POS
+[5,5]
+
+#TIME LABEL COLOR
+"r"
+
+#CRACK START FRAME
+330
+
+#ACQUISITION FPS
+5
+
+#FFMPEG PATH
+"conda"
+
+###########################################################################
+################	PARAMETERS FOR _plastic_def.py FUNCTION	         ################
+##########################################################################
+
+#NON-AFFINE TRANSFORMATION
+# Transform second twin before comparing with first twin (to overlap images taking with different camera)
+# Affine transformation:
+
+# (x', y') = ((A, B), (C, D)) * (x, y) + (E, F)
+
+# where (x, y) is the coordinate of pixel p in second twin,
+# whereas (x', y') is the coordinate of the associated pixel p' in first twin
+# Equivalently:
+
+# x' = A*x + B*y + E
+# y' = C*x + D*y + F\
+
+# Specify coefficients in the form: [A, B, C, D, E, F]
+# Examples:
+
+# - Identity: (1, 0, 0, 1, 0, 0)
+# - Pure translation: (1, 0, 0, 1, dx, dy)
+# - Flip horizontally: (-1, 0, 0, 1, 0, 0)
+# - 90deg rotation CW: (0, 1, -1, 0, 0, 0)
+
+# none is equivalent to Identity
+
+#TRANSFORMATION COEFFICIENTS
+[-1, 0, 0, 1, 164, 0]
+
+#NON-AFF TRANSF FILLVALUE
+0
+
+#NON_AFF TRANSF INTERPOLATION ORDER
+1
+
+###########################################################################
+################	PARAMETERS FOR _plot_corr.py FUNCTION	         ################
+##########################################################################
+
+#USE AREA OF INTEREST (type 0 for False or 1 for True)
+1
+
+#AOI POSITION
+[10,2]
+
+#AOI SIZE
+[6,8]

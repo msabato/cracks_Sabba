@@ -1,0 +1,117 @@
+#####################################################
+#                                                  									 #
+#    CONFIGURATION FILE for CORRELATION ANALYSIS   		 #
+#                                                  									 #
+#####################################################
+
+#ANALYSIS ROOT FOLDER
+"/Users/matteo/Documents/Uni/TESI/_analysis/"
+
+#ANALYSIS SAMPLE FOLDER
+"dry_crack/"
+
+#info about MI file
+
+#FILE NAME
+"dry_crack_h.dat"
+
+#HEADER SIZE (in bytes)
+0
+
+#TOTAL NUMBER OF IMAGES
+2870
+
+#PIXELS PER IMAGE
+1310720
+
+#IMAGE WIDTH (in pixels)
+1280	
+
+#IMAGE HEIGHT (in pixels)
+1024
+
+#PIXEL DEPTH (in bytes)
+1
+
+#ACQUISITION FRAMERATE
+0.1 
+
+#VARIABLE FORMAT
+#Available formats:
+# form	depth type
+# c	    1	  char
+# b	    1	  signed char
+# B	    1	  unsigned char
+# ?	    1	  bool
+# h	    2	  short
+# H	    2 	  unsigned short
+# i	    4	  int
+# I	    4 	  unsigned int
+# l	    4	  long
+# L	    4	  unsigned long
+# q	    8	  long long
+# Q	    8	  unsigned long long
+# f	    4	  float
+# d	    8	  double
+# (see https://docs.python.org/2/library/struct.html)
+"B"
+
+#USERNAME
+"msabato@g.harvard.edu"
+
+#IMAGE SIZE (arrays to be written as [x,y,z] comma separated values with NO SPACES)
+[1280,1024]
+
+#ROI SIZE
+[8,8]
+
+#STARTING IMAGE INDEX
+1
+
+#LAST IMAGE INDEX
+2600
+
+#NUMBER OF LAG TIME CORRELATION TO BE CALCULATED
+19
+
+#LAGS LIST
+[1,2,3,4,5,6,8,10,12,14,16,18,20,25,50,75,100,150,200]
+
+#ROI POSITION [x,y]
+[100,50]
+
+#NUMBER OF DIFFERENT t_0
+5
+
+#t_0
+[100, 200, 500, 1000, 2000]
+
+#CUTOFF VALUE (displacement)
+4.5
+
+#CUTOFF VALUE (correlation)
+0.2
+
+#ANALYZE 1 IMAGE EVERY
+1
+
+#AVERAGE OVER GROUPS OF IMAGES
+1
+
+#VIDEO COLORMAP
+"Greys_r"
+
+#TIME LABEL POS
+[5,5]
+
+#TIME LABEL COLOR
+"r"
+
+#CRACK START FRAME
+330
+
+#ACQUISITION FPS
+5
+
+#FFMPEG PATH
+"conda"
