@@ -22,6 +22,10 @@ K_MI_IMAGE_HEIGHT           = 'img_height'
 K_USER_NAME                 = 'username'
 
 K_AN_IMAGE_SIZE             = 'image_size'
+K_AN_ROI                    = 'region_to_analyze'
+K_AN_SIGMA                  = 'ROI_sigma'
+K_AN_CUTOFF                 = 'ROI_cutoff'
+K_AN_USE_PADDING            = 'use_zero_padding'
 K_AN_ROI_SIZE               = 'ROI_size'
 K_AN_ROI_per_line           = 'ROIs_per_line'
 K_AN_ROI_LINES_NUM          = 'lines_num'               # number of ROI lines in file
